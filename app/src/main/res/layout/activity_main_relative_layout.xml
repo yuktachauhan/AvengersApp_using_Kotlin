@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgTonyStark"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/tony_stark" />
+
+    <TextView
+        android:id="@+id/txtTonyStark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgTonyStark"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="Tony Stark!"
+        android:textColor="#ad1457"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTonyStark"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:text="tonystark@industrie.com"
+        android:textColor="#aa00ff"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEmail"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="+11 7764237469"
+        android:textColor="#1de9b6"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnClickHere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="#90a4ae"
+        android:text="CLICK HERE"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNumber"
+        android:layout_margin="20dp"
+        android:hint="Enter your number"
+        android:inputType="number" />
+
+</RelativeLayout>
