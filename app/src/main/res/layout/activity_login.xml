@@ -15,48 +15,65 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:src="@drawable/avengers_logo" />
-
-    <EditText
-        android:id="@+id/etUserNumber"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etUserNumberLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imgAvengersLogo"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
-        android:hint="@string/mobile_number"
-        android:inputType="phone"
-        android:maxLength="10"
-        android:maxLines="1"
-        android:padding="6dp" />
+        android:layout_below="@+id/imgAvengersLogo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUserNumber"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/mobile_number"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:padding="6dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
     //maxlength = 10 means phone number user will type of maximum 10 numbers
     //maxlines =1 only one line of input
 
-    <EditText
-        android:id="@+id/etUserPassword"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etUserPasswordLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etUserNumber"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
+        android:layout_below="@+id/etUserNumberLayout"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etUserPassword"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:hint="@string/enter_password"
         android:inputType="textPassword"
         android:maxLines="1"
-        android:padding="6dp" />
+        android:padding="6dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
-        android:layout_below="@+id/etUserPassword"
+        android:layout_below="@+id/etUserPasswordLayout"
         android:textStyle="bold"
         android:text="@string/log_in"
         android:background="#880e4f"
-        android:textColor="#ffffff"/>
+        android:textColor="#ffffff"
+        app:cornerRadius="3dp"/>
 
     <TextView
         android:id="@+id/txtForgetPassword"
@@ -78,6 +95,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
         android:textSize="16sp"/>
+
+
 
 
 </RelativeLayout>

@@ -9,12 +9,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.google.android.material.button.MaterialButton
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
     //lateinit var means variable will be initialized later, lateinit can be only used with var not val
-    lateinit var etUserNumber: EditText
-    lateinit var etUserPassword: EditText
-    lateinit var btnLogin: Button
+    lateinit var btnLogin: MaterialButton
     lateinit var txtForgetPassword: TextView
     lateinit var txtRegisterYourself: TextView
     var validNumber = "1234567890"
@@ -37,9 +37,6 @@ class LoginActivity : AppCompatActivity() {
             finish()
         }
         title = "Log In"
-
-        etUserNumber = findViewById(R.id.etUserNumber)
-        etUserPassword = findViewById(R.id.etUserPassword)
         btnLogin = findViewById(R.id.btnLogin)
         txtForgetPassword = findViewById(R.id.txtForgetPassword)
         txtRegisterYourself = findViewById(R.id.txtRegisterYourself)
